@@ -140,8 +140,8 @@ const int8_t modemSleepRqPin = 23;    // MCU pin used for modem sleep/wake reque
 const int8_t modemLEDPin = redLED;    // MCU pin connected an LED to show modem status
 
 // Network connection information for UST IoT network in OSS/OWS
-const char* wifiId  = "UST-IoT";  // WiFi access point name
-const char* wifiPwd = "cms5zcvw";  // WiFi password (WPA2)
+const char* wifiId  = "xxxxxxxx";  // WiFi access point name
+const char* wifiPwd = "xxxxxxxx";  // WiFi password (WPA2)
 
 // Create the modem object
 DigiXBeeWifi modemXBWF(&modemSerial, modemVccPin, modemStatusPin,
