@@ -1,5 +1,5 @@
 /** =========================================================================
- * @file SonarWithWifiModemLIBRARY.ino
+ * @file SonarWithWifiModemSUMP.ino
  * @brief Working Maxbotix Sonar, based on simple logging example from
  * Anthony Aufdenkampe with Xbee wifi modem code and MMW logging.
  *
@@ -237,7 +237,7 @@ const uint8_t sonarDistanceMMWVarResolution = 3;
 const char *sonarDistanceMMWVarName = "distance";
 const char *sonarDistanceMMWVarUnit = "Millimeter";
 const char *sonarDistanceMMWVarCode = "sonarRangeMMW";
-const char *sonarDistanceMMWVarUUID = "dd90d9d9-32d9-4b80-a9c0-9202552121e8"; //Library Sump Distance UUID
+const char *sonarDistanceMMWVarUUID = "12345678-abcd-1234-ef00-1234567890ab"; //Water in Sump Distance UUID
 Variable *sonarDistanceMMWdone = new Variable(sonarDistanceMMW, sonarDistanceMMWVarResolution, sonarDistanceMMWVarName,
 sonarDistanceMMWVarUnit, sonarDistanceMMWVarCode, sonarDistanceMMWVarUUID);
 
@@ -269,7 +269,7 @@ const char *sonarGageHeightVarUnit = "Foot";
 // A short code for the variable
 const char *sonarGageHeightVarCode = "SonarGageHeight";  
 // The (optional) universallly unique identifier
-const char *sonarGageHeightVarUUID = "00ba424d-ce25-462c-80ad-a54717ba89d7";  //LIBRARY Sump gage height UUID
+const char *sonarGageHeightVarUUID = "12345678-abcd-1234-ef00-1234567890ab";  //Sump gage height UUID
 
 
 // Create the calculated water gage height variable objects and return a variable pointer to it
@@ -296,7 +296,7 @@ const char *sonarVolumeVarUnit = "ft^3";
 // A short code for the variable
 const char *sonarVolumeVarCode = "SonarVolume";  
 // The (optional) universallly unique identifier
-const char *sonarVolumeUUID = "bba7f366-c47f-4ad4-ae5d-1d9d818f19a3";  //Library Sump Volume UUID
+const char *sonarVolumeUUID = "12345678-abcd-1234-ef00-1234567890ab";  //Sump Volume UUID
 // Create the calculated volume of water in sump and return a variable pointer to it
 Variable *calculatedSonarVolume = new Variable(
     calculateSonarVolume, sonarVolumeResolution, sonarVolumeVarName, 
@@ -356,9 +356,9 @@ Logger dataLogger(LoggerID, loggingInterval, &varArray);
 // Device registration and sampling feature information can be obtained after
 // registration at https://monitormywatershed.org or https://data.envirodiy.org
 const char* registrationToken =
-    "ddc1a620-a75c-458b-86b8-36f6e3b297d3";  // Device registration token for LIBRARY Basement
+    "12345678-abcd-1234-ef00-1234567890ab";  // Device registration token for Sump
 const char* samplingFeature =
-    "363e0351-527b-4699-82ff-c2918e1dc09f";  // Sampling feature UUID for LIBRARY Basement
+    "12345678-abcd-1234-ef00-1234567890ab";  // Sampling feature UUID for Sump
 
 // Create a data publisher for the Monitor My Watershed/EnviroDIY POST endpoint
 #include <publishers/EnviroDIYPublisher.h>
